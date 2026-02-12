@@ -26,20 +26,39 @@ git clone https://github.com/Standrew33/Application.git
 2. Build the solution:
 ```bash
 dotnet build
+```
 3. Run the **Api** project (Web API):
 ```bash
 dotnet run --project Api
+```
 After startup, note the HTTP port (e.g. http://localhost:5277)
 4. Verify API base URL in:
 ```bash
 Client/appsettings.json
+```
 ```bash
 "Api": {
   "BaseUrl": "http://localhost:5277"
 }
+```
 5. Run the **Client** project (Razor Pages):
 ```bash
 dotnet run --project Client
+```
 6. Open your browser and navigate to:
 ```bash
 http://localhost:5085
+```
+
+## Test login credentials
+
+Use the following hardcoded credentials to sign in:
+- **Username:** `admin`
+- **Password:** `12345`
+
+## Notes
+- No database is used
+- No roles or refresh tokens are implemented
+- Styling is done using custom CSS with BEM naming convention
+- Razor Pages authentication is handled via Cookie Authentication
+- JWT is used only for securing API endpoints
