@@ -31,8 +31,7 @@ dotnet build
 ```bash
 dotnet run --project Api
 ```
-   After startup, note the HTTP port (e.g. http://localhost:5277)
-   4. Verify API base URL in:
+4. Verify API base URL in:
 ```bash
 Client/appsettings.json
 ```
