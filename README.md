@@ -22,6 +22,7 @@ The project is intended as a **simple educational example** and does not use dat
 1. Clone the repository:
 ```bash
 git clone https://github.com/Standrew33/Application.git
+```
 2. Build the solution:
 ```bash
 dotnet build
