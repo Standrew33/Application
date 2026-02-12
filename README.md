@@ -19,6 +19,26 @@ The project is intended as a **simple educational example** and does not use dat
 
 ### Steps
 
-1. Clone the repository
+1. Clone the repository:
 ```bash
-git clone 
+git clone https://github.com/Standrew33/Application.git
+2. Build the solution:
+```bash
+dotnet build
+3. Run the **Api** project (Web API):
+```bash
+dotnet run --project Api
+After startup, note the HTTP port (e.g. http://localhost:5277)
+4. Verify API base URL in:
+```bash
+Client/appsettings.json
+```bash
+"Api": {
+  "BaseUrl": "http://localhost:5277"
+}
+5. Run the **Client** project (Razor Pages):
+```bash
+dotnet run --project Client
+6. Open your browser and navigate to:
+```bash
+http://localhost:5085
