@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Application</title>
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+</head>
+<body class="app">
+    <header class="app__header">
+        <div class="app__header-inner">
+            <a class="app__brand" asp-page="/Index">App</a>
+            <nav class="app__nav">
+                <a class="app__nav-link" asp-page="/Profile">Profile</a>
+
+                @if (User?.Identity?.IsAuthenticated == true)
+                {
+                    <form class="app__nav-form" method="post" asp-page="/Logout">
+                        <button class="app__nav-button" type="submit">Logout</button>
+                    </form>
+                }
+                else
+                {
+                    <a class="app__nav-link" asp-page="/Login">Login</a>
+                }
+
+            </nav>
+        </div>
+    </header>
+
+    <main class="app__main">
+        @RenderBody()
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,29 @@
+﻿@page
+@model Client.Pages.LoginModel
+@{
+    ViewData["Title"] = "Login";
+}
+
+<section class="login">
+    <h1 class="login__title">Login</h1>
+    <form class="login__form" method="post">
+        <div class="login__field">
+            <label class="login__label" asp-for="Form.Username">Login</label>
+            <input class="login__input" asp-for="Form.Username" autocomplete="username" />
+            <span class="login__validation" asp-validation-for="Form.Username"></span>
+        </div>
+        <div class="login__field">
+            <label class="login__label" asp-for="Form.Password">Password</label>
+            <input class="login__input" asp-for="Form.Password" type="password" autocomplete="current-password" />
+            <span class="login__validation" asp-validation-for="Form.Password"></span>
+        </div>
+
+        @if (!string.IsNullOrWhiteSpace(Model.Error))
+        {
+            <div class="login__error">@Model.Error</div>
+        }
+
+        <button class="button button--primary login__button" type="submit">Enter</button>
+    </form>
+
+</section>

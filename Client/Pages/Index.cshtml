@@ -1,0 +1,17 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home";
+}
+
+<section class="home">
+    <h1 class="home__title">Razor + JWT</h1>
+    <p class="home__text">
+        Demo system athorization
+    </p>
+
+    <div class="home__actions">
+        <a class="button button--primary" asp-page="/Login">Login</a>
+        <a class="button" asp-page="/Profile">Profile</a>
+    </div>
+</section>

@@ -1,0 +1,26 @@
+﻿@page
+@model Client.Pages.ProfileModel
+@{
+    ViewData["Title"] = "Profile";
+}
+
+<section class="profile">
+    <h1 class="profile__title">Profile</h1>
+    <div class="profile__meta">
+        You are logged in as: <strong>@User.Identity?.Name</strong>
+    </div>
+
+    @if (!string.IsNullOrWhiteSpace(Model.Error))
+    {
+        <div class="profile__error">@Model.Error</div>
+    }
+    else if (Model.DataJson is null)
+    {
+        <div class="profile__loading">Loading...</div>
+    }
+    else
+    {
+        <pre class="profile__data">@Model.DataJson</pre>
+    }
+
+</section>
